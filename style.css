@@ -401,6 +401,37 @@ article .icon {
   padding: 0.5rem;
 }
 
+.newsletter__subscribe {
+  width: 550px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+}
+
+.newsletter__input {
+  width: 500px;
+  height: 45px;
+  border-radius: 2rem;
+  padding-left: 20px;
+  font-size: 1em;
+}
+
+.button-infor {
+  font-size: 1.15em;
+  font-weight: 600;
+  width: 500px;
+  height: 50px;
+  border-radius: 2rem;
+  background-color: #b3c5c5;
+}
+
+.button-infor:hover {
+  background-color: #9aa8a8;
+}
+
 .contact-info-container {
   display: flex;
   align-items: center;

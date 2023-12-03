@@ -396,23 +396,35 @@
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
+
       <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
+        <form action="" class="newsletter__subscribe">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="newsletter__input"
+            id="email"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="newsletter__input"
+            id="name"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-        </div>
+          <input
+            type="text"
+            placeholder="Enter your content"
+            class="newsletter__input"
+            id="content"
+          />
+          <input
+            type="number"
+            placeholder="Enter your phone"
+            class="newsletter__input"
+            id="phone"
+          />
+          <button class="button-infor" onclick="infor()">Send</button>
+        </form>
       </div>
     </section>
     <footer>
