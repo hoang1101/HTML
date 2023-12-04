@@ -20,11 +20,4 @@ function aboutme() {
   });
 }
 
-function headerclick() {
-  $("#test").click(function () {
-    $(".title").css("color", "yellow");
-  });
-  $("#page2").click(function () {
-    $(this).css("background-color", " #d5d6d6");
-  });
-}
+function headerclick() {}
