@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"
     />
-
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Candal|Lora"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -27,8 +29,8 @@
       </div>
       <ul class="nav">
         <li><a href="#">Home</a></li>
-        <li><a href="index1.html">Thảo</a></li>
-        <li><a href="index.html">Thảo</a></li>
+        <li><a href="index1.html" id="page1">Thảo1</a></li>
+        <li><a href="index.html" id="page2">Thảo</a></li>
         <li>
           <a href="#">
             <i class="fa fa-user"></i>
@@ -65,7 +67,7 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#about" onclick="toggleMenu()" id="about">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -126,20 +128,22 @@
         </div>
         <div class="about-details-container">
           <div class="about-containers">
-            <div class="details-container">
+            <div class="details-container" id="details-container-experience">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
                 class="icon"
+                id="experience"
               />
               <h3>Kinh nghiệm</h3>
               <p>1+ năm <br />Thiết kế giao diện</p>
             </div>
-            <div class="details-container">
+            <div class="details-container" id="details-container-education">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
                 class="icon"
+                id="education"
               />
               <h3>Học vấn</h3>
               <p>
@@ -148,7 +152,7 @@
               </p>
             </div>
           </div>
-          <div class="text-container">
+          <div class="text-container" id="experience-infor" hidden>
             <p>
               Sau 1 năm ra trường, em đã có kinh nghiệm làm Marketing cho agency
               A trong vòng 1 năm. Em khá tự tin vào khả năng viết của bản thân
@@ -162,6 +166,19 @@
               tin rằng với những gì em đã tích lũy được trong thời gian, em có
               thể đảm nhận được vị trí Content Creator của công ty mình. Em cảm
               ơn anh chị đã lắng nghe.
+            </p>
+          </div>
+          <div class="text-container" id="education-infor" hidden>
+            <p>
+              Học viện Công nghệ Bưu chính Viễn thông được thành lập theo quyết
+              định số 516/TTg của Thủ tướng Chính phủ ngày 11 tháng 7 năm 1997
+              trên cơ sở sắp xếp lại 4 đơn vị thành viên thuộc Tổng Công ty Bưu
+              chính Viễn thông Việt Nam, nay là Tập đoàn Bưu chính Viễn thông
+              Việt Nam là Viện Khoa học Kỹ thuật Bưu điện, Viện Kinh tế Bưu
+              điện, Trung tâm đào tạo Bưu chính Viễn thông 1 và 2. Các đơn vị
+              tiền thân của Học viện là những đơn vị có bề dày lịch sử hình
+              thành và phát triển với xuất phát điểm từ Trường Đại học Bưu điện
+              1953.
             </p>
           </div>
         </div>
@@ -438,8 +455,9 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+      <p>Copyright &#169; 2023 My Portfolio. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="/js-jquery/jquery.js"></script>
+    <script src="/js-jquery/script.js"></script>
   </body>
 </html>
