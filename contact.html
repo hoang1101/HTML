@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio1</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Candal|Lora"
+      rel="stylesheet"
+    />
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo1">
+        <h1 class="logo-text"><span>My</span>Portfolio</h1>
+      </div>
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="contact.html" id="page1">About</a></li>
+        <li><a href="index.html" id="page2">Infor</a></li>
+        <li>
+          <a href="#">
+            <i class="fa fa-user"></i>
+            Setting
+            <i class="fa fa-chevron-down" style="font-size: 0.8em"></i>
+          </a>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/">FaceBook</a>
+            </li>
+            <li><a href="#" class="logout">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+
+    <nav id="desktop-nav">
+      <!-- <div class="logo">My Portfolio</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">John Doe</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div> -->
+    </nav>
+
+    <div id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+
+      <div class="contact-info-upper-container">
+        <form action="" class="newsletter__subscribe">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="newsletter__input"
+            id="email"
+          />
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="newsletter__input"
+            id="name"
+          />
+          <input
+            type="text"
+            placeholder="Enter your content"
+            class="newsletter__input"
+            id="content"
+          />
+          <input
+            type="number"
+            placeholder="Enter your phone"
+            class="newsletter__input"
+            id="phone"
+          />
+          <!-- <button class="button-infor" onclick="infor()">Send</button> -->
+          <button class="button-infor" type="submit" onclick="openPopup()">
+            Send
+          </button>
+          <div class="popup" id="popup">
+            <img src="./assets/404-tick.png" />
+            <h2>Thank You!</h2>
+            <p id="popup-infor"></p>
+            <button type="button" onclick="closePopup()">OK</button>
+          </div>
+        </form>
+        <!-- <button class="btn" type="submit" onclick="openPopup()">Submit</button> -->
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &#169; 2023 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./popup.js"></script>
+    <script src="/js-jquery/jquery.js"></script>
+    <script src="/js-jquery/script.js"></script>
+  </body>
+</html>

@@ -30,11 +30,11 @@
   .arrow {
     display: none;
   }
-  section,
+  div,
   .section-container {
     height: fit-content;
   }
-  section {
+  div {
     margin: 0 5%;
   }
   .section__pic-container {

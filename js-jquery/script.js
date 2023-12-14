@@ -21,10 +21,8 @@ function validatePhone(phone) {
   return phoneRegex.test(phone);
 }
 
-// Sử dụng hàm validateEmai
-
-function infor() {
-  // Get input values
+// Function to open the popup
+function openPopup() {
   var email = document.getElementById("email").value;
   var name = document.getElementById("name").value;
   var content = document.getElementById("content").value;
@@ -38,37 +36,52 @@ function infor() {
   }
   if (!name) {
     alert("Phiền bạn điền họ tên trước khi gửi.");
+    event.preventDefault();
+
     return;
   }
   if (!content) {
     alert("Phiền bạn điền nội dung trước khi gửi.");
+    event.preventDefault();
+
     return;
   }
   if (!phone) {
     alert("Phiền bạn điền số điện thoại trước khi gửi.");
+    event.preventDefault();
+
     return;
   }
 
   if (validateEmail(email) && validatePhone(phone)) {
     // return true;
-    alert(`Cảm ơn bạn đã liên hệ cho tôi!
-          Thông tin của bạn gồm:
-          Email: ${email}
-          Họ tên: ${name}
-          Nội dung: ${content}
-          Số điện thoại: ${phone}
-          `);
+    document.getElementById("popup").style.display = "block";
+
+    document.getElementById(
+      "popup-infor"
+    ).innerHTML = `Cảm ơn bạn đã liên hệ cho tôi!<br>
+      Thông tin của bạn gồm:<br>
+      Email: ${email} <br>
+      Họ tên: ${name} <br>
+      Nội dung: ${content} <br>
+      Số điện thoại: ${phone} <br>
+      `;
+    event.preventDefault();
+    // location.reload();
     return;
   } else {
     alert(`Cảm ơn bạn đã liên hệ cho tôi!
     Nhưng email hoặc số điện thoại của bạn không đúng định dạng.
     Mời bạn nhập lại thông tin.
     `);
-    event.preventDefault();
+    // event.preventDefault();
 
     return;
-    // console.log("Địa chỉ email không hợp lệ");
   }
+}
 
-  // Perform calculation based on the selected operation
+// Function to close the popup
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+  location.reload();
 }
